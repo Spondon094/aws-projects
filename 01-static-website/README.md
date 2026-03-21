@@ -169,7 +169,7 @@ systemctl start httpd
 systemctl enable httpd
 
 # Pull website files from S3 using the attached IAM role — no credentials needed
-aws s3 sync s3://dev-app-webfiles-361769565137-eu-central-1-an/ /var/www/html/
+aws s3 sync s3://YOUR-BUCKET-NAME/ /var/www/html/
 
 echo "Deployed on $(hostname) at $(date)" >> /var/log/deploy.log
 ```
