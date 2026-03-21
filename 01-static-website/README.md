@@ -8,7 +8,7 @@
 A production-grade, highly available, and secure static website deployed on AWS. The architecture uses a **3-tier subnet design** (Public / Private-App / Private-Data) across **2 Availability Zones**, with EC2 web servers isolated in private subnets, traffic distributed through an Application Load Balancer, and Auto Scaling for self-healing infrastructure.
 
 
-> 📹 > 📹 **Video Walkthrough:** [Watch on YouTube](https://youtu.be/7_YOSnNIehE)
+> 📹 **Video Walkthrough:** [Watch on YouTube](https://youtu.be/7_YOSnNIehE)
 
 ---
 
