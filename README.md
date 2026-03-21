@@ -11,7 +11,5 @@ and MLOps engineering skills.
 ---
 
 **Author:** Spondon  
-MSc Computational Mathematics · AWS Certified Solutions Architect · CKA  
-🎯 Targeting: MLOps Engineering  
-🔗 [GitHub Profile](https://github.com/Spondon094)
+
 ```
