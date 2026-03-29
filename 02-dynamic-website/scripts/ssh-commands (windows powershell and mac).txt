@@ -1,0 +1,2 @@
+aws ec2-instance-connect ssh --instance-id <the id of your ec2 instance>
+
