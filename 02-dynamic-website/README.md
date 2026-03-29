@@ -8,7 +8,7 @@
 A production-grade, highly available, and secure dynamic website (**Nest Mart & Grocery**) deployed on AWS. This project extends the static website architecture by adding a **MySQL RDS database**, **Secrets Manager** for credential management, an **AMI** for reproducible deployments, and **EC2 Instance Connect Endpoint (EICE)** as a modern, keyless replacement for the Bastion Host pattern.
 
 > 🔗 **Live Demo (archived):** `https://aosnoteproject.com`
-> 📹 **Video Walkthrough:** *(add your link here)*
+> 📹 **Video Walkthrough:** *[(add your link here)](https://drive.google.com/drive/my-drive)*
 
 ---
 
