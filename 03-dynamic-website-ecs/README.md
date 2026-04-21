@@ -10,9 +10,13 @@ This project deploys a full-stack dynamic web application (NestJS backend) on AW
 
 **Live URL:** `https://www.aosnoteproject.com`
 
+![Live Website](screenshots/Website.png)
+
 ---
 
 ## 🏗️ Architecture
+
+![Reference Architecture](screenshots/reference_architecture.png)
 
 ```
 Internet
@@ -59,7 +63,9 @@ Amazon S3 (dev-app-webfiles-...)
 | **Amazon S3** | `dev-app-webfiles-*` | Stores app bundle, SQL migration, config file |
 | **AWS ACM** | Certificate | TLS cert for `aosnoteproject.com` + `*.aosnoteproject.com` |
 | **Amazon Route 53** | `aosnoteproject.com` | Public hosted zone, A record aliased to ALB |
-| **Amazon VPC** | `dev-vpc` | Isolated network with public/private subnets |
+| **Amazon VPC** | `dev-vpc` | Isolated network with public/private subnets across 2 AZs |
+| **NAT Gateway** | `dev-natgw` (×2) | Allows ECS Fargate tasks in private subnets to reach internet outbound |
+| **Auto Scaling Group** | — | Scales ECS task count based on load |
 | **Security Groups** | `dev-sg-alb`, `dev-sg-web`, `dev-sg-db`, `dev-sg-eice` | Layered network access control |
 | **IAM Roles** | `dev-role-ecs-task`, `dev-role-ecs-task-execution`, `dev-role-s3-access` | Least-privilege permissions for ECS and S3 |
 
@@ -180,6 +186,8 @@ IAM roles are scoped per responsibility:
 aws-dynamic-website-deployment/
 ├── README.md
 └── screenshots/
+    ├── Website.png
+    ├── reference_architecture.png
     ├── ECR.png
     ├── ECR_1.png
     ├── ECS_clus.png
